@@ -1,0 +1,173 @@
+day 3
+
+how is everyone? how is studio class? - just beginning project, class might be pushed back a week.
+
+how was Mondrian assignment?
+- about half people feel like they succeeded
+
+[ I should have made sure to put "box sizing" in the assignment PDF ]
+
+questions:
+
+1) when we style body 100% w h, why do we style html too?
+2) margin vs padding
+3) layering divs - what is "inside" a div
+4) what is box sizing
+
+this entire lesson is all about
+
+        -    -    -  absolute vs. relative  -    -    -  
+
+
+There are people who did the Mondrian assignment with individual floating rectangles positioned absolutely. The entire point is to use containers.
+
+<div>
+  <this element is INSIDE the div>
+</div>
+
+divide up the page into segments, then divide those segments into segments.
+
+# BARS.HTML
+look at this page in the browser. Can you imagine the HTML code before typing it? See how much you can imagine? what is the first step?
+
+1) divide the entire page into 3 columns. 2 thick and 1 thin. you have 3 divs.
+
+<div></div>
+<div></div>
+<div></div>
+
+visualize this code. visualize what classes they get.
+
+2) divide each of these 3 into 3 sub sections.
+
+Remember the Mondrian assignment, I suggested dividing everything up into only 2 containers. Imagine dividing this by halves and then inner halves, the inner percentages need to equal percentages that are measured against the entire page. that's near impossible to get perfect. 
+
+<div>
+   <div></div>
+   <div></div>
+   <div></div>
+</div>
+<div>
+   <div></div>
+   <div></div>
+   <div></div>
+</div>
+<div>
+   <div></div>
+   <div></div>
+   <div></div>
+</div>
+
+this is how it looks. you can imagine the code before you type it.
+
+# ACTIVITY
+
+               -----       square.html       -----
+
+how do you make a square div the page?
+
+<div></div>
+
+and the style can be: div{ width:100px; height:100px; }
+that is acceptable but not great, none of the size is RELATIVE. it's absolute. what happens when we define it this way?
+
+div{   width:50%;   height:50%;   }
+
+the width is 50% of the SCREEN WIDTH, and the height is 50% of the SCREEN HEIGHT. it is no longer guaranteed to be a square. what we need is code that sounds like this:
+
+div{ 
+   width:50%;
+   height:50% of the view's width;
+}
+
+# CSS UNITS
+
+check out the units listed on this page: https://www.w3schools.com/cssref/css_units.asp
+2 categories:
+ - ABSOLUTE
+ - RELATIVE - focus on the relative ones.
+
+did you notice "vw" it is defined as "% of the width of the viewport" - that's exactly what we need! change your code to:
+
+div{   width:50%;    height:50vw;   }
+
+and it works! that looks a little awkward though, I like consistency change the first to vw as well:
+
+div{   width:50vw;    height:50vw;   }
+
+now it's possible to drag the window really wide and short and crop off the square. if we switched "vw" out for "vmin" the browser will choose between "vw" and "vh" based on whichever is smaller, always keeping the square visible.
+
+div{   width:50vmin;    height:50vmin;   }
+
+# QUOTE.HTML
+
+this activity pulls everything together, including absolute positioning with one good use case for it - putting text in the bottom right corner of a container.
+
+look at Robby's finished quote.html. we have a centered, padded text box with a quote in it, and the author's name in the bottom right corner. Visualize the HTML
+
+- the quote is a <p> element. yes.
+- is the author's name the same <p> element? No. we have 2 <p> elements
+- there is a <div> wrapping around everything.
+
+so the html looks like:
+
+<div>
+   <p></p>
+   <p></p>
+</div>
+
+great! now let's style it.
+ 
+div{
+   width:80vmin;
+   height:80vmin;
+   background-color: lightgray;
+}
+
+this makes our colored container. it has no padding:
+
+   padding:10vmin;
+
+that made our div larger, we need to add that trick we know about from using borders:
+
+   box-sizing: border-box;
+
+great. now there is a 1 line of code to center this object
+
+   margin:auto;
+
+now our div is positioned properly. let's make the text better fill the area. make the font-size larger, and proportional to the view size.
+
+p{ font-size: 5vmin; }
+
+okay so now we need to target the author's <p> element, not all <p> elements. how do we do that? Classes or IDs! in this case, classes.
+
+change the second <p> into <p class="author">
+
+and add a css definition for the class. Now THIS is an example of useful absolute positioning.
+
+.author{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+
+this puts the author in the bottom right corner of the HTML page, not the container! there is 1 line of code we can add, ADD IT TO THE CONTAINER, that tells all of its children elements to measure everything in units INSIDE of it, instead of INSIDE of the page.
+
+what is <p class="author"> 's parent element? - the <div>
+
+add to the div css:
+
+   position: relative;
+
+and look the author element now goes to the corner of its container!
+
+it's stuck to the side, so add this as the last line of the author css definition
+
+.author{
+   margin-right: 1em;
+}
+
+finished!
+
+
