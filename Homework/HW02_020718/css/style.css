@@ -1,0 +1,96 @@
+body, html {
+    background-color: #ffffff;
+}
+
+#canvas {
+    background-color: #ffffff;
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bigtop {
+    height: 290px;
+}
+
+#middle {
+    height: 10px;
+}
+
+#bottom {
+    height: 100px;
+}
+
+#ltcolumn {
+    width: 100px;
+}
+
+#brcolumn{
+    width: 30px;
+}
+
+#bigbox {
+    height: 290px;
+    width: 290px;
+}
+
+#mediumbox {
+    width: 100px;
+    height: 140px;
+}
+
+#smallbox {
+    width: 100px;
+    height: 100px;
+}
+
+#widebox {
+    width: 250px;
+    height: 100px;
+}
+
+#tinybox {
+    width: 30px;
+    height: 45px;
+}
+
+#b1 {
+    height: 290px;
+    width: 10px;
+}
+
+#b2 {
+    height: 20px;
+    width: 100px;
+}
+
+#b3 {
+    height: 100px;
+    width: 10px;
+}
+
+#b4 {
+    height: 10px;
+    width: 30px;
+}
+
+.red {
+    background-color: #ff0000;   
+}
+
+.blue {
+    background-color: #0000ff;   
+}
+
+.yellow {
+    background-color: #ffff00;   
+}
+
+.black {
+    background-color: #000000;   
+}
+
+.right {
+    float: right;   
+}
