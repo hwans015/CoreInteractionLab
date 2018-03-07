@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+</body>
+<script>
+//this is where you type javascript
+
+//var //store things
+var anumber = 5;
+var astring = "robby";
+var abool = 5 <= 5;
+var avariable;
+//is same thing as saying: var avariable = undifined;
+var integer = 6; 
+var float = 3.14159;
+var high = Infinity;
+var low = Infinity;
+var veryhigh = 1000000000000000000000000000000000;
+var s = "☃";
+
+
+// console.log(abool); //true
+// console.log(anumber); //5
+// console.log(astring); //robby
+// console.log(avariable); //undifined
+// console.log(veryhigh);
+// console.log(s);
+
+///////////////////////////////////////////////
+var leftleft = "xingmen";
+var left = "jiayi";
+var me = "sejung";
+var right = "dahee";
+var rightright = "abby";
+
+//empty array
+var classmates = [];
+
+// var classmates = ["xingmen", "jiayi", "sejung", "dahee", "abby"];
+var classmates = [leftleft, left, me, right, rightright];
+
+console.log(classmates);
+
+//computers start counting at 0
+console.log(classmates [3] + 6);
+
+classmates.push("alessio");
+
+console.log(classmates);
+// console log just lets you look at things, doesn't change them
+
+
+
+////////////////////////////////////////////////
+
+
+//between 0.0 and 1.0			*6하면 0.0 and 5.0
+var randomnumber = Math.random() *6;
+
+randomnumber = parseInt(randomnumber);
+
+console.log(randomnumber);
+
+//turn this random number into a integer from 0 to 5
+
+var randomClassmate = classmates[randomnumber]; //classmates[숫자]는 해당멤버 나옴
+
+document.body.innerHTML = randomClassmate;
+
+
+
+
+
+
+
+
+
+</script>
+</html>

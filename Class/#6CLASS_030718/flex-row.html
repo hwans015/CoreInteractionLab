@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	display: flex;
+	/*justify-content: center;
+	align-items: center; */ /*얘네도 되는데 대신에*/
+	flex-direction: row; /*columns:도있음*/
+}
+h1, p{
+	flex: 1;
+}
+/*p{
+	flex: 2;
+}
+flex는 width.. 그니깐 지금 h1에 2개 p에 1개인데 p는 flex가 2개니깐 1개 2개 1개 로 나뉨.
+*/
+</style>
+</head>
+<body>
+	<h1>Hello</h1>
+	<p>School didn't get cancelled today</p>
+	<h1>:(</h1>
+<!-- flex direction을 row라고 하면 Hello school didn't..... :( 이런식으로 한줄에 나옴 -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,body{height: 100%;}
+body{
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}	
+div{
+	flex: 1;
+}
+</style>
+</head>
+<body>
+</body>
+<script>
+
+var counter = 0;
+while(counter < 10){
+	var d = document.createElement("div");
+	var red = parseInt(Math.random() * 256);
+	var green = parseInt(Math.random() * 256);
+	var blue = parseInt(Math.random() * 256);
+	// var color  = "rgb(225, 200, 150)";
+	var color = "rgb(" + red + "," + green + "," + blue + ")";
+	console.log(color)
+	d.style.backgroundColor = color;
+	document.body.appendChild(d);
+	counter = counter + 1;
+}
+
+	
+</script>
+</html>
