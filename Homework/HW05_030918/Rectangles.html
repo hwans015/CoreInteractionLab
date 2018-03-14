@@ -23,7 +23,15 @@ div{
 		color = Math.floor(color);
 		var colorstring = "hsl(" +color+ ", 100%, 50%)";
 		d.style.backgroundColor = colorstring;
-		console.log(colorstring)
+		// console.log(colorstring)
+
+
+		//this is robby's
+		// var hue = parseInt(Math.random()*36);
+		// var sat = parseInt(Math.random()*60);
+		// var lig = parseInt(Math.random()*100);
+		// var color = "hsl(" +color+ ", "+sat+"%, "+lit+"%)"
+
 
 		var width = parseInt(Math.random()*1680);
 		var size = (width + "px");
@@ -34,6 +42,12 @@ div{
 		var left = parseInt(Math.random()*100);
 		var size4 = (left + "px");
 
+
+		// that's the other option
+		// d.style.width = parseInt(Math.random()*480)+"px";
+		// d.style.left = parseInt(Math.random()*1400)-100+"px";
+		// d.style.top = parseInt(Math.random()*1000)-100+"px";
+
 		d.style.width = size;
 		d.style.height = size2;
 		d.style.top = size3;
@@ -41,6 +55,7 @@ div{
 
 		document.body.appendChild(d);
 		counter = counter +1;
+
 	}
 
 

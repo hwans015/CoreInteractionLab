@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+	position: absolute;
+}
+</style>
+</head>
+<body>
+</body>
+<script>
+
+				// 제일 작은 숫자랑 높은숫자 - var myInt = randomInt (요기안에 있는숫자)
+function randomInt(low, high){
+	var random = parseInt(Math.random()* (high-low) + low );
+	return random;
+}
+
+var myInt = randomInt ( -100, 100);
+console.log( myInt );
+
+</script>
+</html>
