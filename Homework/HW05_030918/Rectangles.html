@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+	position: absolute;
+}
+</style>
+</head>
+<body>
+</body>
+<script>
+
+	var counter = 0;
+	while(counter < 50){
+		var d = document.createElement("div");
+		// var red = parseInt(Math.random()*256);
+		// var green = parseInt(Math.random()*256);
+		// var blue = parseInt(Math.random()*256);
+		// var color = "rgb(" +red+ "," +green+ "," +blue+ ")";
+		// console.log(color)
+		var color = Math.random() * 360;
+		color = Math.floor(color);
+		var colorstring = "hsl(" +color+ ", 100%, 50%)";
+		d.style.backgroundColor = colorstring;
+		console.log(colorstring)
+
+		var width = parseInt(Math.random()*1680);
+		var size = (width + "px");
+		var height = parseInt(Math.random()*1024);
+		var size2 = (height + "px");
+		var top = parseInt(Math.random()*100);
+		var size3 = (top + "px");
+		var left = parseInt(Math.random()*100);
+		var size4 = (left + "px");
+
+		d.style.width = size;
+		d.style.height = size2;
+		d.style.top = size3;
+		d.style.left = size4;
+
+		document.body.appendChild(d);
+		counter = counter +1;
+	}
+
+
+
+</script>
+</html>
