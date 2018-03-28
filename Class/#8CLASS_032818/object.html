@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+var array = ["temp", "chanceofrain", "humidity"]
+// array []
+
+// object {}
+var number = 5;
+
+var weather = {
+	"temperature" : 48.15, 
+	"chanceofrain" : .1,
+	"humidity" : .5
+}
+
+console.log(weather);
+console.log(weather["temperature"]);
+
+var doublearray = [
+	["apple", "pear"],
+	["strawberry", "blueberry"],
+	["potato", "leek"]
+]
+
+//this
+console.log(doublearray[1][1]);
+//세세한거 지정하려면 []하고 []또 하면 찾아짐
+
+//is the same as this
+var innerArray = doublearray[1];
+console.log(innerArray[1]);
+
+var classmates = {
+	"Sejung" : {
+		"breakfast" : "bagel",
+		"animal" : "fox"
+	},
+	"Dahee" : {
+		"breakfast" : "french toast",
+		"animal" : "goat"
+	},
+	"Abby" : {
+		"breakfast" : "pancake",
+		"animal" : "puppy"
+	}
+}
+
+console.log(classmates);
+console.log(classmates["Sejung"]["animal"]);
+
+</script>
+</body>
+</html>
+

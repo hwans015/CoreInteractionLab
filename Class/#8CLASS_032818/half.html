@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1 id="header" style="color: blue">Enter a number:</h1>
+	<input type="text" id="textfield"> 
+	<button id="okaybutton">Okay</button>
+
+</body>
+<script type="text/javascript">
+
+document.getElementById("okaybutton").onclick = function(){
+	var text = document.getElementById("textfield").value;
+	console.log(text);
+	var number = parseFloat(text);
+	console.log(number);
+	var halved = number / 2;
+	document.getElementById("header").innerHTML += halved;
+}
+
+
+
+</script>
+</html>

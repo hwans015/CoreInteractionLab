@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+		margin: 2em;
+	}
+</style>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+	<input type="file" id="files" style="display: none;">
+	<button type="button" class="btn btn-outline-secondary" id="button">Open File</button>
+	<pre id="contents"></pre>
+</body>
+<script>
+	document.getElementById("button").onclick = function(){
+		document.getElementById("files").click();
+	}
+	document.getElementById("files").onchange = function(){
+		var file = document.getElementById("files").files[0];
+		console.log(file);
+		var reader = new FileReader();
+		reader.onloadend = function(event){
+			var result =event.target.result;
+			console.log(result);
+			document.getElementById("contents").innerHTML = result;
+		}
+		reader.readAsText(file);
+	}
+</script>
+</html>
