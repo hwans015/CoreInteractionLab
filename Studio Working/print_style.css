@@ -1,0 +1,12 @@
+/*@page {
+	size: auto;
+	margin: 0mm;
+}
+*/
+.noprint {
+	color: transparent;
+}
+
+.left.open > #capture > .row > .word{
+	font-size: 32px;
+}
