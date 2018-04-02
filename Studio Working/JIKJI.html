@@ -52,7 +52,7 @@
       <div class="input-form">
         <div class="input-wrapper">
           <input id="text" type="text" placeholder="TYPE OWN WORD">
-          <button "onclick="addWord()">ADD</button>
+          <button onclick="addWord()">ADD</button>
         </div>
       </div>
     </div>
@@ -107,8 +107,11 @@
     });
   }
 
+
   function addWord() {
+
     $text = document.getElementById("text").value;
+
 
     $( ".word-list" ).append( '<span class="word" draggable="true" ondragstart="return start(event)" ondragend="return end(event)">'+ $text +'</span>');
   }
