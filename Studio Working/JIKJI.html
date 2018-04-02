@@ -9,6 +9,7 @@
   <link rel='stylesheet' href='print_style.css' type='text/css' media='print'>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="dom-to-image.js"></script>
 </head>
 
 <body>
@@ -29,9 +30,10 @@
         <div class="row" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
         <div class="row" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
       </div>
-      <button class="goback noprint" onclick="goBack()">go back</button>
-      <button class="print noprint" onclick="Print()">print</button>
-      <button class="download noprint" onclick="download()">download</button>
+      <button class="goback noprint" onclick="goBack()">Back</button>
+      <button class="print noprint" onclick="Print()">Print</button>
+      <button class="download noprint" onclick="download()">Save</button>
+
     </div>
     <div class="right">
       <div class="word-list" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
@@ -50,13 +52,14 @@
       <div class="input-form">
         <div class="input-wrapper">
           <input id="text" type="text" placeholder="TYPE OWN WORD">
-          <button onclick="addWord()">ADD</button>
+          <button "onclick="addWord()">ADD</button>
         </div>
       </div>
     </div>
   </div>
-  <button onclick="downloadImage()" id="nemo">PRINT!</button>
+  <button onclick="downloadImage()" id="nemo">Show</button>
   <script>
+
   function downloadImage(){
      $('.left').addClass('open');
      $('.wrapper').addClass('open');
@@ -71,7 +74,7 @@
     window.print();
   }
 
-  function download(){
+  function download2(){
 
         var divToPrint = document.getElementById('capture').outerHTML;
 
@@ -90,6 +93,19 @@
         frameDoc.document.close();
   }
   
+  function download(){
+    var node = document.getElementById("capture");
+    domtoimage.toPng(node).then(function (dataUrl) {
+    var img = new Image();
+    img.src = dataUrl;
+    console.log(img.src);
+    img.setAttribute("id","img");
+    var a = document.createElement("a");
+    a.href = img.src;
+    a.download = "image.png";
+    a.click();
+    });
+  }
 
   function addWord() {
     $text = document.getElementById("text").value;

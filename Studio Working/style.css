@@ -41,14 +41,27 @@
     .goback{
       display: none;
       position: absolute;
-      left:3%;
+      right:3%;
       top:40%;
     }
     .left.open .goback{
       display: inline-block;
-      margin-top: 334px;
+      margin-top: 246px;
+      margin-right: 210px;
       width: 100px;
       height: 30px;
+      background-color: #2f1d0c;
+      border: 2px solid #dca570;
+      color: transparent;
+    }
+
+    .left.open .goback:hover{
+    background-color: white;
+    border-color: white;
+    font-family: serif;
+    color: #905923;
+    -webkit-text-stroke: .7px #2f1d0c;
+    font-size: 20px;
     }
 
     .print{
@@ -60,9 +73,22 @@
 
     .left.open .print{
       display: inline-block;
-      margin-top: 334px;
+      margin-top: 354px;
+      margin-right: 210px;
       width: 100px;
       height: 30px;
+      background-color: #2f1d0c;
+      border: 2px solid #dca570;
+      color: transparent;
+    }
+
+    .left.open .print:hover{
+    background-color: white;
+    border-color: white;
+    font-family: serif;
+    color: #905923;
+    -webkit-text-stroke: .7px #2f1d0c;
+    font-size: 20px;
     }
 
     .download{
@@ -74,9 +100,22 @@
 
     .left.open .download{
       display: inline-block;
-      margin-top: 100px;
+      margin-top: 300px;
+      margin-right: 210px;
       width: 100px;
       height: 30px;
+      background-color: #2f1d0c;
+      border: 2px solid #dca570;
+      color: transparent;
+    }
+
+    .left.open .download:hover{
+    background-color: white;
+    border-color: white;
+    font-family: serif;
+    color: #905923;
+    -webkit-text-stroke: .7px #2f1d0c;
+    font-size: 20px;
     }
 
     .left.open #capture{
