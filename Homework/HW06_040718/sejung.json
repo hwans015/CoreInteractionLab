@@ -1,0 +1,16 @@
+{
+	"name":["SeJung", "Hwang"],
+
+	"home":{"latitude": "37.5729",
+			"longitude": "126.97928"},
+
+	"url": "https://github.com/hwans015/CoreInteractionLab",
+
+	"favorites": { "color": "000000",
+					"book": {"title": "Here-is-New-York",
+							 "author": "E.B.Withe"
+							},
+					"tool": "Indesign",
+					"temperature": "18"
+				 }	
+}
