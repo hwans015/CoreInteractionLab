@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+#map{
+	width: 100%;
+	height: 500px;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<div id="map">
+<script type="text/javascript">
+
+var urls = [
+	"https://raw.githubusercontent.com/hwans015/CoreInteractionLab/master/Homework/HW06_040718/sejung.json",
+	"https://raw.githubusercontent.com/carolaguivel/CoreLabInteraction/master/Homework/Homework%206/carolyn.json",
+	"https://raw.githubusercontent.com/Xingmann/CoreInteractionLab/master/Homework/xingman-hw6.json",
+	"https://raw.githubusercontent.com/ewolf0/CoreInteraction/master/homework/hw06/ellie.json",
+	"https://raw.githubusercontent.com/sancl877/InteractWithMeZaddy.github.io/master/homework/leo.json",
+	"https://raw.githubusercontent.com/Alessiosegala/Core-Lab-2018/master/homework%206%20json/alessiosegala.json",
+	"https://raw.githubusercontent.com/vivekafc/coreinteraction/master/homework/json/vivek.json",
+	"https://raw.githubusercontent.com/dadadadahee/dadadadahee.github.io/master/dahee-choi.json",
+	"https://raw.githubusercontent.com/Elinaaaaa/S18-CoreInteraction/master/homework/assignment6.json",
+	"https://raw.githubusercontent.com/simonesciacovelli/coreinteraction/master/homework/homework6/simon.json",
+	"https://raw.githubusercontent.com/traschillo/CoreInteraction/master/homework/taylor.json"
+];
+
+// console.log(urls);
+var classmates = [];
+
+function getData(){
+	for(var i = 0; i < urls.length; i = i + 1){
+	$.getJSON(urls[i], function(data){
+		// console.log(data);
+		// console.log(data.name[0]);
+		classmates.push(data);
+		// console.log(classmates);
+		if(classmates.length == urls.length){
+			weDone();
+		}
+	});
+}
+
+}
+function weDone(){
+	var options = {
+		center: new google.maps.LatLng(40, -74),
+		zoom : 5
+	};
+	var map = new google.maps.Map(document.getElementById("map"), options);
+
+	console.log(classmates);
+	for(var i = 0; i < classmates.length; i = i + 1){
+		var lat = classmates[i].home.latitude;
+		var lon = classmates[i].home.longitude;
+		var marker = new google.maps.Marker({position: new google.maps.LatLng(lat, lon)});
+		marker.setMap(map);
+	}
+}
+
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoZya2-2KzwOoGfwq6LaNkepmeB4Dqvqk&callback=getData"></script>
+
+</body>
+</html>
