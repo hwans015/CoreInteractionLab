@@ -94,10 +94,14 @@
   <script src='main.js'></script>
   <script>
   var $carousel = $('#image_carousel').flickity({
-    cellAlign: 'left',
-    contain: true,
-    wrapAround: true,
+      cellAlign: 'left',
+      contain: true,
+      wrapAround: true,
   });
+
+    var path = window.location.href;
+    var number = path.split("#").pop();
+    
     // you get the url (this has the hash number in it)
     var name = "Rat";
 
