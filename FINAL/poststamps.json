@@ -73,109 +73,10 @@
 		"date":"12.01.1986",
 		"designer":"Hye-yeon Hong",
 		"images":"1986.jpg/images"
-	},
-	{ 
-		"title":"Rabbit",
-		"date":"12.01.1974",
-		"designer":"Sung-shil Kim",
-		"images":"1974.jpg/images"
 	}
 ],
-	"Monkey":[{ 
-		"title":"New Year",
-		"date":"12.01.2015",
-		"designer":"Ji-Won Mo",
-		"images":"2015.jpg/images"
-	},
-	{ 
-		"title":"Rejoice of Monkey",
-		"date":"12.01.2003",
-		"designer":"Eun-kyung Park",
-		"images":"2003.jpg/images"
-	},
-	{ 
-		"title":"Kite Flying",
-		"date":"12.02.1991",
-		"designer":"Jung-hak Jang",
-		"images":"1991.jpg/images"
-	},
-	{ 
-		"title":"Zodiac Sign (Monkey)",
-		"date":"12.01.1979",
-		"designer":"Geun-moon Lee",
-		"images":"1979.jpg/images"
-	}
-],
-	"Rooster":[{ 
-		"title":"Rooster and Snow",
-		"date":"12.01.2016",
-		"designer":"So-Jeong Kim",
-		"images":"2016.jpg/images"
-	},
-	{ 
-		"title":"Rooster and Chick",
-		"date":"12.01.2004",
-		"designer":"Eun-kyung Park",
-		"images":"2004.jpg/images"
-	},
-	{ 
-		"title":"Dawn and Rooster",
-		"date":"12.01.1992",
-		"designer":"Hee-han Jeon",
-		"images":"1992.jpg/images"
-	},
-	{ 
-		"title":"Zodiac Sign (Rooster)",
-		"date":"12.01.1980",
-		"designer":"Hee-han Jeon",
-		"images":"1980.jpg/images"
-	}
-],
-	"Dog":[{ 
-		"title":"Greeting snow",
-		"date":"12.01.2017",
-		"designer":"Jae-Yong Shin",
-		"images":"2017.jpg/images"
-	},
-	{ 
-		"title":"Dog in Snow",
-		"date":"12.01.2005",
-		"designer":"Eun-kyung Park",
-		"images":"2005.jpg/images"
-	},
-	{ 
-		"title":"Greeting Dog",
-		"date":"12.01.1993",
-		"designer":"Eae-ro Yoo",
-		"images":"1993.jpg/images"
-	},
-	{ 
-		"title":"Camellia and Dog",
-		"date":"12.01.1981",
-		"designer":"Young-kwang Kwon",
-		"images":"1981.jpg/images"
-	}
-],
-	"Pig":[{ 
-		"title":"Pig in Snow",
-		"date":"12.01.2006",
-		"designer":"Eun-kyung Park",
-		"images":"2006.jpg/images"
-	},
-	{ 
-		"title":"Bags and Pig",
-		"date":"12.01.1994",
-		"designer":"Eae-ro Yoo",
-		"images":"1994.jpg/images"
-	},
-	{ 
-		"title":"Zodiac Sign (Pig)",
-		"date":"12.01.1982",
-		"designer":"Sung-shil Kim",
-		"images":"1982.jpg/images"
-	}
-],
-	"Dragon":[{ 
+
+		"Dragon":[{ 
 		"title":"Dragon in Sky",
 		"date":"12.01.2011",
 		"designer":"Eun-kyung Park",
@@ -192,12 +93,6 @@
 		"date":"12.01.1987",
 		"designer":"Kyo-man Kim",
 		"images":"1987.jpg/images"
-	},
-	{ 
-		"title":"Dragon",
-		"date":"12.01.1975",
-		"designer":"Yong-bae Kim",
-		"images":"1975.jpg/images"
 	}
 ],
 	"Snake":[{ 
@@ -255,12 +150,85 @@
 		"date":"12.01.1990",
 		"designer":"Gab-bae Jeon",
 		"images":"1990.jpg/images"
-	},
-	{ 
-		"title":"Zodiac Sign (Sheep)",
-		"date":"12.01.1978",
-		"designer":"Yeo-song Park",
-		"images":"1978.jpg/images"
 	}
 
-]}
+],
+	"Monkey":[{ 
+		"title":"New Year",
+		"date":"12.01.2015",
+		"designer":"Ji-Won Mo",
+		"images":"2015.jpg/images"
+	},
+	{ 
+		"title":"Rejoice of Monkey",
+		"date":"12.01.2003",
+		"designer":"Eun-kyung Park",
+		"images":"2003.jpg/images"
+	},
+	{ 
+		"title":"Kite Flying",
+		"date":"12.02.1991",
+		"designer":"Jung-hak Jang",
+		"images":"1991.jpg/images"
+	}
+],
+	"Rooster":[{ 
+		"title":"Rooster and Snow",
+		"date":"12.01.2016",
+		"designer":"So-Jeong Kim",
+		"images":"2016.jpg/images"
+	},
+	{ 
+		"title":"Rooster and Chick",
+		"date":"12.01.2004",
+		"designer":"Eun-kyung Park",
+		"images":"2004.jpg/images"
+	},
+	{ 
+		"title":"Dawn and Rooster",
+		"date":"12.01.1992",
+		"designer":"Hee-han Jeon",
+		"images":"1992.jpg/images"
+	}
+	
+],
+	"Dog":[{ 
+		"title":"Greeting snow",
+		"date":"12.01.2017",
+		"designer":"Jae-Yong Shin",
+		"images":"2017.jpg/images"
+	},
+	{ 
+		"title":"Dog in Snow",
+		"date":"12.01.2005",
+		"designer":"Eun-kyung Park",
+		"images":"2005.jpg/images"
+	},
+	{ 
+		"title":"Greeting Dog",
+		"date":"12.01.1993",
+		"designer":"Eae-ro Yoo",
+		"images":"1993.jpg/images"
+	}
+	
+],
+	"Pig":[{ 
+		"title":"Pig in Snow",
+		"date":"12.01.2006",
+		"designer":"Eun-kyung Park",
+		"images":"2006.jpg/images"
+	},
+	{ 
+		"title":"Bags and Pig",
+		"date":"12.01.1994",
+		"designer":"Eae-ro Yoo",
+		"images":"1994.jpg/images"
+	},
+	{ 
+		"title":"Zodiac Sign (Pig)",
+		"date":"12.01.1982",
+		"designer":"Sung-shil Kim",
+		"images":"1982.jpg/images"
+	}
+],
+}
