@@ -25,7 +25,7 @@ var classmates = [];
 for(var i = 0; i < urls.length; i = i + 1){
 	$.getJSON(urls[i], function(data){
 		// console.log(data);
-		// console.log(data.name[0]);
+		 console.log(data.name[0]);
 		classmates.push(data);
 		// console.log(classmates);
 		if(classmates.length == urls.length){

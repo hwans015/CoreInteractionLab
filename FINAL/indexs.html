@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="flickity.css" media="screen">
+
+    <style>
+
+      .main_carousel {
+        width: 300px;
+        height: 100px;
+        margin: auto;
+        justify-content: center;
+      }
+      #image_carousel .flickity-viewport{
+        height:500px !important;
+      }
+      .image_carousel {
+        margin-top:65px;
+        justify-content: center;
+        width: 100%;
+        height: 500px;
+      }
+      .carousel-cell-image {
+        display:block;
+        width: auto;
+        height:100%;
+      }
+      .carousel_cell {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="main_carousel">
+      <div id='1' class="carousel_cell">
+        <span>RAT</span>
+      </div>
+      <div id='2' class="carousel_cell">
+        <span>OX</span>
+      </div>
+      <div id='3' class="carousel_cell">
+        <span>TIGER</span>
+      </div>
+      <div id='4' class="carousel_cell">
+        <span>RABBIT</span>
+      </div>
+      <div id='5' class="carousel_cell">
+        <span>DRAGON</span>
+      </div>
+      <div id='6' class="carousel_cell">
+        <span>SNAKE</span>
+      </div>
+      <div id='7' class="carousel_cell">
+        <span>HORSE</span>
+      </div>
+      <div id='8' class="carousel_cell">
+        <span>SHEEP</span>
+      </div>
+      <div id='9' class="carousel_cell">
+        <span>MONKEY</span>
+      </div>
+      <div id='10' class="carousel_cell">
+        <span>ROOSTER</span>
+      </div>
+      <div id='11' class="carousel_cell">
+        <span>DOG</span>
+      </div>
+      <div id='12' class="carousel_cell">
+        <span>PIG</span>
+      </div>
+    </div>
+
+      <div id='image_carousel' data-flickity='{ "imagesLoaded": true }' class="image_carousel">
+        <div class="carousel_cell">
+          <img class="carousel-cell-image" src="./images/2007.jpg" alt="">
+        </div>
+        <div class="carousel_cell">
+          <img class="carousel-cell-image" src="./images/1995.jpg" alt="">
+        </div>
+        <div class="carousel_cell">
+          <img class="carousel-cell-image" src="./images/1983.jpg" alt="">
+        </div>
+      </div>
+
+  <script src='jquery.min.js'></script>
+  <script src="flickity.pkgd.min.js"></script>
+  <script src='main.js'></script>
+  <script>
+    var $carousel = $('#image_carousel').flickity({
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+    });
+
+    // var path = window.location.href;
+    // var number = path.split("#").pop();
+
+    // you get the url (this has the hash number in it)
+    // var name = "Rat";
+
+    var urls = "https://raw.githubusercontent.com/hwans015/CoreInteractionLab/master/FINAL/poststamps.json";
+
+    var names = ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Sheep", "Monkey", "Rooster", "Dog", "Pig" ];
+
+    var animals = [];
+    var currentAnimals = [];
+    function getData(){
+      $.getJSON(urls, function(data){
+        animals = data;
+        });
+    }
+    getData();
+    function getAnimal(index){
+      name = names[index];
+      //currentAnimals = [];
+      currentAnimals = animals[name];
+      //console.log(currentAnimals[0]);
+      addAnimalImage();
+    }
+    function addAnimalImage(){
+      var numberOfAnimals = currentAnimals.length;
+      var currentCarousel = $(".flickity-slider")[1];
+      console.log(currentCarousel);
+
+      for(var i=0; i<currentCarousel.childNodes.length+1; i++){
+        $carousel.flickity('remove',currentCarousel.childNodes[0]);
+      }
+      $carousel.flickity('remove',currentCarousel.childNodes[0]);
+      var element = ""
+      for(var i=0; i<numberOfAnimals; i++){
+        var selectedAnimal = currentAnimals[i];
+        var imageName = selectedAnimal.images.split("/")[0]; // 이미지 이름 가져오기
+         element = $("<div class=\"carousel_cell\">" +"<img class=\"carousel-cell-image\" src=\"./images/" + imageName + "\"/></div>");
+        $carousel.flickity('append',element);
+      }
+     
+    }
+
+  </script>
+  </body>
+</html>
