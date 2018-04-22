@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Korean Postage Stamps</title>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Gothic+A1:400,600" rel="stylesheet">
 <style>
 html,body{
 	margin: 0;
@@ -16,24 +17,35 @@ html,body{
 	left:-9px;
 	position: absolute;
 }
-.Kmark{
+.words{
 	padding-right: 65vw;
-	width: 29vw;
+	width: 18vw;
 	height: 10vh;
 	margin: 0;
-	padding-top: 5vh;
+	padding-top: 7vh;
 	padding-left: 5vw;
 	font-size: 40px;
 	background-color: #ffffff;
 }
+.Kmark{
+	font-size: 40px;
+	background-color: #ffffff;
+	font-family: 'Do Hyeon', sans-serif;
+}
+.Kmark2{
+	font-size: 40px;
+	background-color: #ffffff;
+	font-family: 'Gothic A1', sans-serif;
+	font-weight: 600;
+}
 .wrapper{
 	width: 91.5vw;
-	height: 57vh;
+	height: 53vh;
 	background-color: #ffffff;
 	justify-content: center;
 	display: table;
 	padding-left: 7.5vw;
-	padding-top: 11vh;
+	padding-top: 9vh;
 }
 .bottom{
 	width: 81vw;
@@ -93,11 +105,11 @@ a:hover{
 </head>
 <body>
 <div class="dots">
-<div class="Kmark"> 대한민국KOREA </div>
+<div class="words"> <span class="Kmark">대한민국</spsn><span class="Kmark2">KOREA</span> </div>
 <div class="wrapper">
 	<div class="animaltop"><a href="indexs.html#RAT"> RAT </a></div>
 	<div class="animaltop"><a href="indexs.html#OX"> OX </a></div>
-	<div class="animaltop"><a href="indexs.html#TIGER"> TIGER </a></div>
+	<div class="animaltop"><a href="indexs.html#3"> TIGER </a></div>
 	<div class="animaltop"><a href="indexs.html#RABBIT"> RABBIT </a></div>
 	<div class="animaltop"><a href="indexs.html#DRAGON"> DRAGON </a></div>
 	<div class="animaltop"><a href="indexs.html#SNAKE"> SNAKE </a></div>
@@ -111,10 +123,10 @@ a:hover{
 <div class="bottom">12</div>
 </div>
 
-<!-- <script src='jquery.min.js'></script>
+<script src='jquery.min.js'></script>
 <script src="flickity.pkgd.min.js"></script>
 <script src='main.js'></script>
-<script>
+<!-- <script>
 	
 	function goToSlide(number){
 		$(".carousel_cell").carousel(number);
