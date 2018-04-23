@@ -142,7 +142,7 @@
       name = names[index];
       //currentAnimals = [];
       currentAnimals = animals[name];
-      //console.log(currentAnimals[0]);
+      console.log(currentAnimals[0]);
       addAnimalImage();
     }
     function addAnimalImage(){
@@ -157,11 +157,30 @@
       var element = ""
       for(var i=0; i<numberOfAnimals; i++){
         var selectedAnimal = currentAnimals[i];
-        var imageName = selectedAnimal.images.split("/")[0]; // 이미지 이름 가져오기
+        var imageName = selectedAnimal.images.split("/")[0];
+         // 이미지 이름 가져오기
+        var imageTitle = selectedAnimal.title; 
+        var designer = selectedAnimal.designer;
+        var date = selectedAnimal.date;
+
+        console.log(imageTitle);
+
          element = $("<div class=\"carousel_cell\">" +"<img class=\"carousel-cell-image\" src=\"./images/" + imageName + "\"/></div>");
         $carousel.flickity('append',element);
+       
+
       }
-      
+
+    
+
+    var $caption = $('.caption');
+      // Flickity instance
+    var flkty = $carousel.data('flickity');
+
+    $carousel.on( 'select.flickity', function() {
+      // set image caption using img's alt
+      $caption.text( flkty.selectedElement.alt )
+    });
     }
 
   </script>
