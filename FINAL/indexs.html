@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="flickity.css" media="screen">
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700|Inconsolata" rel="stylesheet">
 
     <style>
     body{
@@ -16,18 +16,18 @@
         justify-content: center;
       }
       #image_carousel .flickity-viewport{
-        height:400px !important;
+        height:510px !important;
       }
       .image_carousel {
         margin-top:24px;
         justify-content: center;
         width: 100%;
-        height: 400px;
+        height: 500px;
       }
       .carousel-cell-image {
         display:block;
         width: auto;
-        height:100%;
+        height:80%;
       }
       .carousel_cell {
         width: 100%;
@@ -35,14 +35,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+      }
+
+      .carousel_cell > img{
+        position: relative;
+      }
+
+      .carousel_cell > p{
+        position: relative;
+        width: 100%;
       }
       
       .caption {
-        background: #FAFAFA;
+        background: transparent;
         margin: 0;
-        padding: 10px;
+        padding: 20px;
         text-align: center;
-        height: 74px;
+        height: 90px;
+        font-family: 'Inconsolata', monospace;
       }
 
       span{
@@ -97,16 +108,19 @@
       <div id='image_carousel' data-flickity='{ "imagesLoaded": true }' class="image_carousel">
         <div class="carousel_cell">
           <img class="carousel-cell-image" src="./images/2007.jpg" alt="dkdk">
+          <p class="caption">Rat in Snow <br> (11.30.2007) <br> Eun-Kyung Park </p>
         </div>
         <div class="carousel_cell">
           <img class="carousel-cell-image" src="./images/1995.jpg" alt="">
+           <p class="caption">Snowman and Rat <br> (12.01.1995) <br> In-hae Won </p>
         </div>
         <div class="carousel_cell">
           <img class="carousel-cell-image" src="./images/1983.jpg" alt="">
+           <p class="caption">Zodiac Sign (Rat) <br> (12.01.1983) <br> Sung-shil Kim </p>
         </div>
       </div>
 
-      <p class="caption">&nbsp;</p>
+<!--       <p class="caption">&nbsp;</p> -->
 
   <script src='jquery.min.js'></script>
   <script src="flickity.pkgd.min.js"></script>
@@ -117,8 +131,6 @@
         contain: true,
         wrapAround: true,
     });
-
-    // $carousel.flickity( 'selectCell', '#3' );
 
     // var path = window.location.href;
     // var number = path.split("#").pop();
@@ -145,6 +157,12 @@
       console.log(currentAnimals[0]);
       addAnimalImage();
     }
+    // function oneAnimal(index){
+    //   name = names[index];
+    //   currentAnimals = animals[name];
+    //   console.log(currentAnimals[0]);
+    //   addAnimalImage();
+    // }
     function addAnimalImage(){
       var numberOfAnimals = currentAnimals.length;
       var currentCarousel = $(".flickity-slider")[1];
@@ -165,7 +183,8 @@
 
         console.log(imageTitle);
 
-         element = $("<div class=\"carousel_cell\">" +"<img class=\"carousel-cell-image\" src=\"./images/" + imageName + "\"/></div>");
+        element = $("<div class=\"carousel_cell\">" +"<img class=\"carousel-cell-image\" src=\"./images/" + imageName + "\"/><p class='caption'>" + imageTitle + " <br> " + "(" + date + ")" +" <br> "+ designer+ "</p></div>");
+        
         $carousel.flickity('append',element);
        
 

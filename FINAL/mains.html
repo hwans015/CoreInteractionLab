@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Korean Postage Stamps</title>
-	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Gothic+A1:400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Gothic+A1:400,600|Oleo+Script" rel="stylesheet">
 <style>
 html,body{
 	margin: 0;
@@ -59,7 +59,7 @@ html,body{
 .animaltop{
 	width: 8vw;
 	height: 15vh;
-	background-color: black;
+/*	background-color: black;*/
 	margin: 3vw;
 	float: left;
 	margin-bottom: 1.5vw;
@@ -73,7 +73,7 @@ html,body{
 .animalbot{
 	width: 8vw;
 	height: 15vh;
-	background-color: black;
+/*	background-color: black;*/
 	margin: 3vw;
 	float: left;
 	margin-top: 1.5vw;
@@ -87,18 +87,85 @@ html,body{
 .wrapper .animaltop:hover{
 	opacity: .5;
 	color: white;
+	visibility: visible;
+
 }
 .wrapper .animalbot:hover{
 	opacity: .5;
 	color: white;
+	visibility: visible;
 }
 a{
 	color: transparent;
 	text-decoration: none;
+	font-family: 'Oleo Script', cursive;
+	font-size: 20px;
 }
 a:hover{
-	color: white;
+	color: black;
 	text-decoration: none;
+	opacity: 1;
+}
+
+#rat{
+	background-image: url("자산 12.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#ox{
+	background-image: url("자산 11.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#tiger{
+	background-image: url("자산 10.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#rabbit{
+	background-image: url("자산 3.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#dragon{
+	background-image: url("자산 7.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#snake{
+	background-image: url("자산 4.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#horse{
+	background-image: url("자산 1.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#sheep{
+	background-image: url("자산 9.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#monkey{
+	background-image: url("자산 5.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#rooster{
+	background-image: url("자산 6.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#dog{
+	background-image: url("자산 8.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+#pig{
+	background-image: url("자산 13.png");
+	background-repeat: no-repeat;
+    background-size: cover;
 }
 
 </style>
@@ -107,25 +174,27 @@ a:hover{
 <div class="dots">
 <div class="words"> <span class="Kmark">대한민국</spsn><span class="Kmark2">KOREA</span> </div>
 <div class="wrapper">
-	<div class="animaltop"><a href="indexs.html#RAT"> RAT </a></div>
-	<div class="animaltop"><a href="indexs.html#OX"> OX </a></div>
-	<div class="animaltop"><a href="indexs.html#3"> TIGER </a></div>
-	<div class="animaltop"><a href="indexs.html#RABBIT"> RABBIT </a></div>
-	<div class="animaltop"><a href="indexs.html#DRAGON"> DRAGON </a></div>
-	<div class="animaltop"><a href="indexs.html#SNAKE"> SNAKE </a></div>
-	<div class="animalbot"><a href="indexs.html#HORSE"> HORSE </a></div>
-	<div class="animalbot"><a href="indexs.html#SHEEP"> SHEEP </a></div>
-	<div class="animalbot"><a href="indexs.html#MONKEY"> MONKEY </a></div>
-	<div class="animalbot"><a href="indexs.html#ROOSTER"> ROOSTER </a></div>
-	<div class="animalbot"><a href="indexs.html#DOG"> DOG </a></div>
-	<div class="animalbot"><a href="indexs.html#PIG"> PIG </a></div>
+	<div class="animaltop" id ="rat"><a href="indexs.html#1"> RAT </a></div>
+	<div class="animaltop" id = "ox"><a href="indexs.html#slide2"> OX </a></div>
+	<div class="animaltop" id = "tiger"><a href="indexs.html#slide3"> TIGER </a></div>
+	<div class="animaltop" id = "rabbit"><a href="indexs.html#slide4"> RABBIT </a></div>
+	<div class="animaltop" id = "dragon"><a href="indexs.html#slide5"> DRAGON </a></div>
+	<div class="animaltop" id = "snake"><a href="indexs.html#slide6"> SNAKE </a></div>
+	<div class="animalbot" id = "horse"><a href="indexs.html#HORSE"> HORSE </a></div>
+	<div class="animalbot" id = "sheep"><a href="indexs.html#SHEEP"> SHEEP </a></div>
+	<div class="animalbot" id = "monkey"><a href="indexs.html#MONKEY"> MONKEY </a></div>
+	<div class="animalbot" id = "rooster"><a href="indexs.html#ROOSTER"> ROOSTER </a></div>
+	<div class="animalbot" id = "dog"><a href="indexs.html#DOG"> DOG </a></div>
+	<div class="animalbot" id = "pig"><a href="indexs.html#PIG"> PIG </a></div>
 </div>
 <div class="bottom">12</div>
 </div>
 
-<script src='jquery.min.js'></script>
+
+<!-- <script src='jquery.min.js'></script>
 <script src="flickity.pkgd.min.js"></script>
-<script src='main.js'></script>
+<script src='main.js'></script> -->
+
 <!-- <script>
 	
 	function goToSlide(number){
