@@ -67,40 +67,40 @@
   <body>
 
     <div class="main_carousel" id="category">
-      <div id='1' class="carousel_cell">
+      <div id='0' class="carousel_cell">
         <span>RAT</span>
       </div>
-      <div id='2' class="carousel_cell">
+      <div id='1' class="carousel_cell">
         <span>OX</span>
       </div>
-      <div id='3' class="carousel_cell">
+      <div id='2' class="carousel_cell">
         <span>TIGER</span>
       </div>
-      <div id='4' class="carousel_cell">
+      <div id='3' class="carousel_cell">
         <span>RABBIT</span>
       </div>
-      <div id='5' class="carousel_cell">
+      <div id='4' class="carousel_cell">
         <span>DRAGON</span>
       </div>
-      <div id='6' class="carousel_cell">
+      <div id='5' class="carousel_cell">
         <span>SNAKE</span>
       </div>
-      <div id='7' class="carousel_cell">
+      <div id='6' class="carousel_cell">
         <span>HORSE</span>
       </div>
-      <div id='8' class="carousel_cell">
+      <div id='7' class="carousel_cell">
         <span>SHEEP</span>
       </div>
-      <div id='9' class="carousel_cell">
+      <div id='8' class="carousel_cell">
         <span>MONKEY</span>
       </div>
-      <div id='10' class="carousel_cell">
+      <div id='9' class="carousel_cell">
         <span>ROOSTER</span>
       </div>
-      <div id='11' class="carousel_cell">
+      <div id='10' class="carousel_cell">
         <span>DOG</span>
       </div>
-      <div id='12' class="carousel_cell">
+      <div id='11' class="carousel_cell">
         <span>PIG</span>
       </div>
     </div>
@@ -126,17 +126,60 @@
   <script src="flickity.pkgd.min.js"></script>
   <script src='main.js'></script>
   <script>
+
+    // var my_path;
+
+    // function getUrlVars() {
+    //   var variables = {};
+
+    //   var path = window.location.href;
+    //   var animal_name = path.split("#")[1];
+
+    //   console.log("animal_name", animal_name)
+
+    //   // window.location.hash = path;
+
+    //   variables.path = path;
+    //   variables.animal_name = animal_name;
+    //   //variables.the_animal_name = 
+
+    //   my_path = variables;
+
+    //   console.log(my_path);
+
+
+    // }
+
+    // getUrlVars();
+
+    // console.log("variables",my_path)
+
+
+
+    // console.log("testing: ", my_path.animal_name)
+
+    // var targetCell = my_path.animal_name // slide you want to go to
+
+    // $carousel.flickity( 'select', targetCell )
+
+    /* 
+
+    The carousel needs to be blank at first 
+
+    getUrlVars gives you the right name, like "Rat", specifically through my_path.animal_name
+
+    Then my_path.animal_name needs to be in the function that fetches data from JSON
+
+    Use it to get the right animal you want, then load the right content in the carousel
+
+    */
+
     var $carousel = $('#image_carousel').flickity({
         cellAlign: 'left',
         contain: true,
         wrapAround: true,
     });
 
-    // var path = window.location.href;
-    // var number = path.split("#").pop();
-
-    // you get the url (this has the hash number in it)
-    // var name = "Rat";
 
     var urls = "https://raw.githubusercontent.com/hwans015/CoreInteractionLab/master/FINAL/poststamps.json";
 
@@ -144,12 +187,15 @@
 
     var animals = [];
     var currentAnimals = [];
+
     function getData(){
       $.getJSON(urls, function(data){
         animals = data;
         });
     }
+
     getData();
+
     function getAnimal(index){
       name = names[index];
       //currentAnimals = [];
@@ -157,12 +203,14 @@
       console.log(currentAnimals[0]);
       addAnimalImage();
     }
+
     // function oneAnimal(index){
     //   name = names[index];
     //   currentAnimals = animals[name];
     //   console.log(currentAnimals[0]);
     //   addAnimalImage();
     // }
+
     function addAnimalImage(){
       var numberOfAnimals = currentAnimals.length;
       var currentCarousel = $(".flickity-slider")[1];
@@ -171,8 +219,11 @@
       for(var i=0; i<currentCarousel.childNodes.length+1; i++){
         $carousel.flickity('remove',currentCarousel.childNodes[0]);
       }
+
       $carousel.flickity('remove',currentCarousel.childNodes[0]);
-      var element = ""
+
+      var element = "";
+
       for(var i=0; i<numberOfAnimals; i++){
         var selectedAnimal = currentAnimals[i];
         var imageName = selectedAnimal.images.split("/")[0];

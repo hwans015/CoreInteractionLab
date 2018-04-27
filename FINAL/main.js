@@ -1,5 +1,41 @@
 $(function () {
 
+
+  var my_path;
+
+  function getUrlVars() {
+    var variables = {};
+
+    var path = window.location.href;
+    var animal_name = path.split("#")[1];
+
+    console.log("animal_name", animal_name)
+
+    // window.location.hash = path;
+
+    variables.path = path;
+    variables.animal_name = animal_name;
+    //variables.the_animal_name = 
+
+    my_path = variables;
+
+    console.log(my_path);
+
+
+  }
+
+  getUrlVars();
+
+  console.log("variables",my_path)
+
+
+  
+  console.log("testing: ", my_path.animal_name)
+
+  var targetCell = my_path.animal_name // slide you want to go to
+
+
+
   var slide_count;
   //
   $('.main_carousel').flickity({
@@ -18,6 +54,9 @@ $(function () {
     contain: true,
     wrapAround: true,
   });
+
+  $('.main_carousel').flickity( 'select', targetCell )
+
 
   //  $('.image_carousel').flickity({
   //   on: {
