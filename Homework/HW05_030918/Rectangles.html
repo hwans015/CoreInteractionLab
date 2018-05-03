@@ -12,7 +12,7 @@ div{
 <script>
 
 	var counter = 0;
-	while(counter < 50){
+	while(counter < 100){
 		var d = document.createElement("div");
 		// var red = parseInt(Math.random()*256);
 		// var green = parseInt(Math.random()*256);
@@ -33,25 +33,26 @@ div{
 		// var color = "hsl(" +color+ ", "+sat+"%, "+lit+"%)"
 
 
-		var width = parseInt(Math.random()*1680);
-		var size = (width + "px");
-		var height = parseInt(Math.random()*1024);
-		var size2 = (height + "px");
-		var top = parseInt(Math.random()*100);
-		var size3 = (top + "px");
-		var left = parseInt(Math.random()*100);
-		var size4 = (left + "px");
+		// var width = parseInt(Math.random()*1680);
+		// var size = (width + "px");
+		// var height = parseInt(Math.random()*1024);
+		// var size2 = (height + "px");
+		// var top = parseInt(Math.random()*400);
+		// var size3 = (top + "px");
+		// var left = parseInt(Math.random()*100);
+		// var size4 = (left + "px");
 
 
 		// that's the other option
-		// d.style.width = parseInt(Math.random()*480)+"px";
-		// d.style.left = parseInt(Math.random()*1400)-100+"px";
-		// d.style.top = parseInt(Math.random()*1000)-100+"px";
+		d.style.width = parseInt(Math.random()*1680)+"px";
+		d.style.left = parseInt(Math.random()*1100)-100+"px";
+		d.style.top = parseInt(Math.random()*800)-100+"px";
+		d.style.height = parseInt(Math.random()*1024)+"px";
 
-		d.style.width = size;
-		d.style.height = size2;
-		d.style.top = size3;
-		d.style.left = size4;
+		// d.style.width = size;
+		// d.style.height = size2;
+		// d.style.top = size3;
+		// d.style.left = size4;
 
 		document.body.appendChild(d);
 		counter = counter +1;

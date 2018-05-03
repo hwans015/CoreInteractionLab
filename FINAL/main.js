@@ -29,12 +29,10 @@ $(function () {
   console.log("variables",my_path)
 
 
-  
-  console.log("testing: ", my_path.animal_name)
-
   var targetCell = my_path.animal_name // slide you want to go to
 
 
+  console.log("targetCell", targetCell)
 
   var slide_count;
   //
@@ -55,7 +53,9 @@ $(function () {
     wrapAround: true,
   });
 
-  $('.main_carousel').flickity( 'select', targetCell )
+  //$('.main_carousel').flickity( 'select', targetCell )
+
+  $('.main_carousel').flickity( 'select', targetCell, false, true )
 
 
   //  $('.image_carousel').flickity({
