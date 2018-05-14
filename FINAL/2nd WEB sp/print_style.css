@@ -3,8 +3,11 @@
 	margin: 0mm;
 }
 */
-.noprint {
-	color: transparent;
+body {
 	visibility: hidden;
+}
+
+#back{
+	visibility: visible !important; 
 }
 
