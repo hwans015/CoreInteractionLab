@@ -2,7 +2,7 @@
 	body {
 	  margin: 0;
 	  padding: 0;
-	/*  overflow: hidden;*/
+	  overflow: hidden;
 	}
 	.page {
 	  width: 100vw;
@@ -11,22 +11,24 @@
 	}
 
 	#page_3 .question{
-		font-size: 5vw;
+		font-family: 'youngserifregular', serif;
+		font-size: 3.5vw;
 		position: absolute;
 		line-height: 1.2;
 		width: 100%;
 		color: #573737;
 		font-weight: bold;
-/*		padding-left: 8%;*/
-		padding-top: 6%;
+		padding-top: 10%;
 		align-items: center;
 		text-align: center;
 
 	}
 
 	#page_3 .drop-wrapper{
-		padding-top: 18%;
-		padding-left: 42%;
+		padding-top: 21%;
+		align-items: center;
+		justify-content: center;
+		display: flex;
 	}
 
 	.drop{
@@ -34,15 +36,14 @@
 	}
 	
 	#page_3 .button{
-		font-size: 2vw;
-		font-family: serif;
-		color: #573737;
-		font-style: italic;
-		font-weight: bold;
-		align-items: center;
+		margin-top: 5%;
+		margin-left: 45%;
 		justify-content: center;
-		display: flex;
-		padding-top: 4%;
+	    align-items: center;
+	    display: flex;
+	    background-color: transparent;
+	    border-style: none;
+	    width: 10%;
 	}
 
 	#page_4 #result {
@@ -51,23 +52,19 @@
 		font-weight: bold;
 		color: #573737;
 		text-align: center;
-		padding-top: 3%;
-/*		padding-bottom: 11%;*/
+		padding-top: 6%;
+		font-family: 'youngserifregular', serif;
 	}
 
 	#page_4 .button{
-		font-size: 2vw;
-		font-family: serif;
-		color: #573737;
-		font-style: italic;
-		font-weight: bold;
-		display: inline-block;
-		text-align: center;
-		border: .1em solid;
-		width: 9%;
-		height: auto;
-		margin-left: 45.5%;
-		margin-top: 7%;
+		margin-top: 5%;
+		margin-left: 48%;
+		justify-content: center;
+	    align-items: center;
+	    display: flex;
+	    background-color: transparent;
+	    border-style: none;
+	    width: 4%;
 	}
 
 	#image{
@@ -77,18 +74,78 @@
 		display: flex;
 		padding: 0%;
 		margin: auto;
-		padding-top: 8%;
+		padding-top: 5%;
 	}
 
 	img{
 		width: 100%;
 	}
 
+	select {
 
-@media (max-width: 400px){
+        /* styling */
+        background-color: #FBDBD7;
+        border: thin solid #573737;
+        border-radius: 4px;
+        display: inline-block;
+        font: inherit;
+        line-height: 1.5em;
+        padding: 0.5em 3.5em 0.5em 1em;
+
+        /* reset */
+
+        margin: 0;      
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }     
+
+      select.minimal {
+        background-image:
+          linear-gradient(45deg, transparent 50%, #573737 50%),
+          linear-gradient(135deg, #573737 50%, transparent 50%),
+          linear-gradient(to right, #ccc, #ccc);
+        background-position:
+          calc(100% - 20px) calc(1em + 2px),
+          calc(100% - 15px) calc(1em + 2px),
+          calc(100% - 2.5em) 0.5em;
+        background-size:
+          5px 5px,
+          5px 5px,
+          1px 1.5em;
+        background-repeat: no-repeat;
+      }
+
+      select.minimal:focus {
+        background-image:
+          linear-gradient(45deg, #573737 50%, transparent 50%),
+          linear-gradient(135deg, transparent 50%, #573737 50%),
+          linear-gradient(to right, #ccc, #ccc);
+        background-position:
+          calc(100% - 15px) 1em,
+          calc(100% - 20px) 1em,
+          calc(100% - 2.5em) 0.5em;
+        background-size:
+          5px 5px,
+          5px 5px,
+          1px 1.5em;
+        background-repeat: no-repeat;
+        border-color: #573737;
+        outline: 0;
+      }
+
+
+      select:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+      }
+
+@media (max-width: 500px){
 
 	#page_3 .question{
-		font-size: 5em;
+		font-size: 1.7em;
 		position: absolute;
 		line-height: 1.2;
 		width: 100%;
@@ -101,41 +158,51 @@
 
 	}
 
-	#page_3 .button{
-		font-size: 4em;
-		font-family: serif;
-		color: #573737;
-		font-style: italic;
-		font-weight: bold;
-		align-items: center;
+	#page_3 .drop-wrapper{
+		padding-top: 58%;
+		padding-left: 0%;
+		display: block;
+
+	}
+
+	.drop{
+		padding: 4%;
 		justify-content: center;
+		align-items: center;
 		display: flex;
 	}
 
+	#page_3 .button{
+		margin-top: 14%;
+		margin-left: 41%;
+		justify-content: center;
+	    align-items: center;
+	    display: flex;
+	    background-color: transparent;
+	    border-style: none;
+	    width: 15%;
+	}
+
 	#page_4 #result {
-		font-size: 6em;
+		font-size: 2em;
 		line-height: 1.8;
 		font-weight: bold;
 		color: #573737;
 		text-align: center;
 		padding-top: 30%;
 		padding-bottom: 11%;
+		font-family: 'youngserifregular', serif;
 	}
 
 	#page_4 .button{
-		font-size: 4em;
-		font-family: serif;
-		color: #573737;
-		font-style: italic;
-		font-weight: bold;
-		align-items: center;
+		margin-top: 5%;
+		margin-left: 45%;
 		justify-content: center;
-		display: flex;
-		border: .1em solid;
-		width: 30%;
-		height: auto;
-		margin-left: 34%;
-		margin-top: 8%;
+	    align-items: center;
+	    display: flex;
+	    background-color: transparent;
+	    border-style: none;
+	    width: 10%;
 	}
 
 	#image{
@@ -150,5 +217,66 @@
 	img{
 		width: 100%;
 	}
+
+	select {
+
+        /* styling */
+        background-color: #FBDBD7;
+        border: thin solid #573737;
+        border-radius: 5px;
+        display: inline-block;
+        font: inherit;
+        line-height: 1.5em;
+        padding: 0.5em 3.5em 0.5em 1em;
+
+        /* reset */
+
+        margin: 0;      
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }     
+
+      select.minimal {
+        background-image:
+          linear-gradient(45deg, transparent 50%, #573737 50%),
+          linear-gradient(135deg, #573737 50%, transparent 50%),
+          linear-gradient(to right, #ccc, #ccc);
+        background-position:
+          calc(100% - 20px) calc(1em + 2px),
+          calc(100% - 15px) calc(1em + 2px),
+          calc(100% - 2.5em) 0.5em;
+        background-size:
+          5px 5px,
+          5px 5px,
+          1px 1.5em;
+        background-repeat: no-repeat;
+      }
+
+      select.minimal:focus {
+        background-image:
+          linear-gradient(45deg, #573737 50%, transparent 50%),
+          linear-gradient(135deg, transparent 50%, #573737 50%),
+          linear-gradient(to right, #ccc, #ccc);
+        background-position:
+          calc(100% - 15px) 1em,
+          calc(100% - 20px) 1em,
+          calc(100% - 2.5em) 0.5em;
+        background-size:
+          5px 5px,
+          5px 5px,
+          1px 1.5em;
+        background-repeat: no-repeat;
+        border-color: #573737;
+        outline: 0;
+      }
+
+
+      select:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+      }
 }
 

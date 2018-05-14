@@ -2,71 +2,8 @@
 <head>
     <link rel='stylesheet' href='zstyle.css'>
     <link href="https://fonts.googleapis.com/css?family=Gaegu|League+Script" rel="stylesheet">
-<style>
-      
-      select {
-
-        /* styling */
-        background-color: white;
-        border: thin solid blue;
-        border-radius: 4px;
-        display: inline-block;
-        font: inherit;
-        line-height: 1.5em;
-        padding: 0.5em 3.5em 0.5em 1em;
-
-        /* reset */
-
-        margin: 0;      
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-      }     
-
-      select.minimal {
-        background-image:
-          linear-gradient(45deg, transparent 50%, gray 50%),
-          linear-gradient(135deg, gray 50%, transparent 50%),
-          linear-gradient(to right, #ccc, #ccc);
-        background-position:
-          calc(100% - 20px) calc(1em + 2px),
-          calc(100% - 15px) calc(1em + 2px),
-          calc(100% - 2.5em) 0.5em;
-        background-size:
-          5px 5px,
-          5px 5px,
-          1px 1.5em;
-        background-repeat: no-repeat;
-      }
-
-      select.minimal:focus {
-        background-image:
-          linear-gradient(45deg, green 50%, transparent 50%),
-          linear-gradient(135deg, transparent 50%, green 50%),
-          linear-gradient(to right, #ccc, #ccc);
-        background-position:
-          calc(100% - 15px) 1em,
-          calc(100% - 20px) 1em,
-          calc(100% - 2.5em) 0.5em;
-        background-size:
-          5px 5px,
-          5px 5px,
-          1px 1.5em;
-        background-repeat: no-repeat;
-        border-color: green;
-        outline: 0;
-      }
-
-
-      select:-moz-focusring {
-        color: transparent;
-        text-shadow: 0 0 0 #000;
-      }
-
-
-</style>    
+      <link rel="stylesheet" href="young.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 </head>
 
 <body>
@@ -78,7 +15,7 @@
       <div class="drop-wrapper">
       <div class="drop">
             <select id='year_select' name="birth-year" class="minimal">
-                  <option value="0">year</option>
+                  <option value="0"> Select year</option>
                   <option value="2012">2018</option>
                   <option value="2011">2017</option>
                   <option value="2013">2016</option>
@@ -191,7 +128,7 @@
 
       <div class="drop">
             <select id='month_select' name="birth-month" class="minimal">
-                  <option value="0">month</option>
+                  <option value="0"> Select month</option>
                   <option value="1">January</option>
                   <option value="2">February</option>
                   <option value="3">March</option>
@@ -209,7 +146,7 @@
       
       <div class="drop">     
             <select id='date_select' name="birth-date" class="minimal">
-                  <option value="0">date</option>
+                  <option value="0">Select date</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -246,14 +183,14 @@
       </div>
      
       <div class="button">
-            <a id='find_sign' href='zodiac.html#page_4' onclick="findZodiac()">FIND YOUR SIGN</a>
+            <a id='find_sign' href='zodiac.html#page_4' onclick="findZodiac()"><img src="arrow.png"></a>
       </div>
 </div>
 
 <div id='page_4' class='page'>
       <div id='result'></div>
       <div id="image"><img id="stamp" src=""></div>
-      <a href=""><div class="button">HOME</div></a>
+      <a href=""><div class="button"><img src="rf.png"></div></a>
 </div>
   
 <script src='zmain.js'></script>
