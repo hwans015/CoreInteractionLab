@@ -1,0 +1,84 @@
+open “Terminal”
+
+pwd: tells you where you are
+
+ls: tells you the files in this directory
+
+cd: change into a folder from where you are
+
+type “cd “ drag the folder into the terminal window, hit enter
+now you are in the folder
+
+php -S localhost:8000
+
+now, open your website at http://localhost:8000/ and type the file after
+
+________________________________________________________________________
+
+Last login: Mon Apr 30 18:49:24 on console
+SEui-MacBook-Pro:~ SJ$ pwd
+/Users/SJ
+SEui-MacBook-Pro:~ SJ$ ls
+Adlm
+Applications
+Creative Cloud Files
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures
+Public
+hwans015@newschool.edu Creative Cloud Files
+sejung5550@gmail.com Creative Cloud Files
+SEui-MacBook-Pro:~ SJ$ cd Desktop/
+SEui-MacBook-Pro:Desktop SJ$ ls
+#
+2017 FALL
+BRAND
+CBX
+CoreInteractionLab
+HW02_020718
+Intro Design
+STUDIO
+Screen Shot 2018-04-24 at 6.12.42 PM.png
+Screen Shot 2018-04-24 at 9.02.30 PM.png
+Screen Shot 2018-04-24 at 9.15.26 PM.png
+Screen Shot 2018-04-29 at 1.16.58 PM.png
+Screen Shot 2018-05-03 at 10.04.52 AM.png
+Screen Shot 2018-05-03 at 10.07.25 AM.png
+Screen Shot 2018-05-03 at 3.39.22 AM.png
+Screen Shot 2018-05-06 at 1.19.07 PM.png
+Screen Shot 2018-05-06 at 1.49.39 PM.png
+Screen Shot 2018-05-06 at 1.50.08 PM.png
+Screen Shot 2018-05-07 at 10.24.55 AM.png
+TYPO
+tri.png
+고구마 [복구됨].ai
+무제-1.ai
+자산 1.png
+자산 2.png
+SEui-MacBook-Pro:Desktop SJ$ pwd
+/Users/SJ/Desktop
+SEui-MacBook-Pro:Desktop SJ$ cd /Users/SJ/Desktop/STUDIO/FINAL/2nd\ WEB 
+SEui-MacBook-Pro:2nd WEB SJ$ pwd
+/Users/SJ/Desktop/STUDIO/FINAL/2nd WEB
+SEui-MacBook-Pro:2nd WEB SJ$ ls
+finalize design.xd	postmark.png		year.html
+images			style 2.css		자산 2.png
+main 2.js		style.css
+main.js			year 2.html
+SEui-MacBook-Pro:2nd WEB SJ$ php -S localhost:8000
+PHP 5.5.36 Development Server started at Wed May  9 10:23:27 2018
+Listening on http://localhost:8000
+Document root is /Users/SJ/Desktop/STUDIO/FINAL/2nd WEB
+Press Ctrl-C to quit.
+[Wed May  9 10:23:37 2018] 127.0.0.1:49618 [404]: / - No such file or directory
+[Wed May  9 10:23:37 2018] 127.0.0.1:49619 [404]: /favicon.ico - No such file or directory
+[Wed May  9 10:23:47 2018] 127.0.0.1:49667 [200]: /year.html
+[Wed May  9 10:23:47 2018] 127.0.0.1:49668 [200]: /style.css
+[Wed May  9 10:23:47 2018] 127.0.0.1:49669 [200]: /main.js
+[Wed May  9 10:23:47 2018] 127.0.0.1:49670 [200]: /postmark.png
+[Wed May  9 10:24:27 2018] 127.0.0.1:49841 [200]: /year.php
+
